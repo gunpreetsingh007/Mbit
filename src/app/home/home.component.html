@@ -1,0 +1,30 @@
+<div align= "center" class="form-group">
+    <header style="background-color: #e9ecef;">
+         
+        
+    <h1 >  Welcome To &nbsp;<img height="80" width = "100 " src="../assets/mbitlogo.png">Bit</h1>
+       
+   </header> 
+    <table>
+        <tr>
+             <td class="form-group">Enter the token number &nbsp; &nbsp;
+                 <label for ="token"></label>
+                 <input type="text" id="token" #tokeninput class="form-control"> &nbsp;  
+                 <div class="alert alert-danger" [hidden]="tokenSpan" [style.color]="'red'">Enter correct token</div> 
+            </td>
+
+        </tr>
+       
+        <tr>
+            <td>
+                <button class="btn btn-primary"  (click)="verification(tokeninput.value)" (click)="proceed(index,currentRestaurant,currentToken)" > Submit</button>
+ 
+            </td>
+
+
+        </tr>
+    </table>
+
+</div>
+
+

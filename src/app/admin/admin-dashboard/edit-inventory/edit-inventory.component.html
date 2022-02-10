@@ -1,0 +1,22 @@
+<h2 align="center">
+    Edit or Add new Items
+</h2>
+<hr/>
+<div align="center">
+<table cellpadding="14">
+
+    <tr *ngFor="let data of food; index as i">
+        <td>{{i+1}}</td>
+        <td><input   [(ngModel)] = "data.item"   type="text" ></td>
+        <td><input  [(ngModel)] = "data.price"   type="text" ></td>
+        <td><input  [(ngModel)] = "data.available"   type="text"></td>
+
+        <td><a> <i (click)="filterlist(data.id)"  class="fa fa-trash"></i> </a> </td>
+    </tr>
+    </table>
+</div>
+<div align="center">
+    
+<button (click)="addItem()" class="btn btn-primary">ADD ITEM</button>&nbsp;&nbsp;
+<button (click)= "updateAll()"  class="btn btn-primary">SAVE CHANGES</button>
+</div>

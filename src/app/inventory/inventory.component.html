@@ -1,0 +1,28 @@
+<div style="background-color: #e9ecef;">
+<h1 align="center">Welcome To {{restaurant}}</h1>
+</div>
+<br/>
+<h1 > &nbsp;&nbsp;&nbsp; Select the items to eat </h1>
+<br/>
+
+<table class="table table-hover" cellpadding="35">
+<tr>
+    <th>Index</th>
+    <th>FoodItems</th>
+    <th>Price</th>
+</tr>
+<tr *ngFor="let data of ourFood ; index as i">
+    <td>{{i+1}}</td>
+    <td>{{data.item}}</td>
+    <td>Rs{{data.price}}</td>
+    <td><input type="checkbox" ngModel name="ischeck" #ischeck="ngModel" (click)="captureid(ischeck,data.id)"  ></td>
+</tr>
+</table>
+<div class="wrapper">
+<span  class="alert alert-danger" [hidden]= "length" >You have not selected any item</span>
+</div >
+<div class="wrapper1" >
+<button class="btn btn-primary" (click)="checkout()" (click)="thenNavigate(mix, our)" >Proceed to Checkout</button>
+</div>
+
+

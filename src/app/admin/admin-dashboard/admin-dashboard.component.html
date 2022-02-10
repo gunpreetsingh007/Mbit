@@ -1,0 +1,26 @@
+<div>
+    <h3 >Dashboard</h3> 
+    <br/>
+    <h4 align="right">Welcome {{actualuser.displayName}} </h4>
+</div>
+<div class="row">
+    <div class="col-md-7"><button routerLink="/admin/dashboard/edit-inventory" class="btn btn-primary">Edit&nbsp;Inventory</button>&nbsp;
+        <button routerLink="/admin/dashboard/data-analytics" class="btn btn-primary">Data&nbsp;Analytics</button>
+       <br/>
+        
+    <table class="table table-hover" cellpadding="10">
+
+        <tr *ngFor="let data of food ; index as i">
+            <td>{{i+1}}</td>
+            <td>{{data.item}}</td>
+            <td>Rs{{data.price * data.quantity}}</td>
+            <td>  <label>Available &nbsp; {{ data.available }} </label>  </td>
+        </tr>
+        </table>  
+    </div>
+ 
+    <div class="col-md-5">
+        <br/>
+        <app-notification-bar></app-notification-bar>
+    </div>
+</div>

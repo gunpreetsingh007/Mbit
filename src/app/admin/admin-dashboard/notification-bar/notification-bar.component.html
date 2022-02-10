@@ -1,0 +1,20 @@
+<table class="table table-hover" >
+
+    <tr *ngFor="let data of listselected ; index as i">
+        <td>{{i+1}}</td>
+        <td>Table no.{{data.tableno}} has ordered</td>
+        <td> 
+           <div *ngFor="let food of data.fooditem">
+            {{food}}
+           </div>
+        </td>
+        <td> 
+            <div *ngFor="let qty of data.quantity">
+             {{qty}}
+            </div>
+         </td>
+        <td>
+            <a> <i (click)="filterList(data.id)" class="fa fa-trash"></i> </a> 
+        </td>
+    </tr>
+</table>

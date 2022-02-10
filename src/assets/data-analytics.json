@@ -1,0 +1,52 @@
+{
+  "DataAnalytics": [
+    {
+      "id": 1,
+      "tableno": 1,
+      "fooditem": [
+        "Noodles",
+        "Paneer tikka",
+        "Samosa"
+      ],
+      "quantity": [
+        1,
+        1,
+        1
+      ],
+      "time": ""
+    },
+    {
+      "id": 2,
+      "tableno": 1,
+      "fooditem": [
+        "Noodles"
+      ],
+      "quantity": [
+        1
+      ],
+      "time": ""
+    },
+    {
+      "id": 3,
+      "tableno": 2,
+      "fooditem": [
+        "hgvjhj"
+      ],
+      "quantity": [
+        null
+      ],
+      "time": ""
+    },
+    {
+      "id": 4,
+      "tableno": 3,
+      "fooditem": [
+        "ujhkjh"
+      ],
+      "quantity": [
+        7
+      ],
+      "time": ""
+    }
+  ]
+}

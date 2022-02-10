@@ -1,0 +1,27 @@
+<h1 align="center">  CheckOut  </h1>
+<br/>
+<h3>You have selected following items</h3>
+<table class="table table-hover" cellpadding="30">
+
+    <tr *ngFor="let data of ourFood2 ; index as i">
+        <td>{{i+1}}</td>
+        <td>{{data.item}}</td>
+        <td>Rs{{data.price * data.quantity}}</td>
+        <td>  <label>Available &nbsp; {{ data.available }} </label>  </td>
+
+        <td>
+            <label for="number"></label>
+            <input  ngModel = "lolol" #lolol = "ngModel" (click) = "qtyFunc(lolol , data.id , data.index)"  (keydown.enter)="qtyFunc(lolol , data.id , data.index)" (click)= "calcost()" (keydown.enter)= "calcost()"type="number" value="1" id="number" min="1" bind-max="resetvalues[data.index]" title="specify quantity"/>
+        </td>
+        <td><a> <i (click)="filterList(data.id)" (click)="resetavailable(data.id)" (click)="calcost()" class="fa fa-trash"></i> </a> </td>
+    </tr>
+    </table>
+
+    <div>
+    <label>Total Cost &nbsp; Rs {{totalcost }} </label>
+    </div>
+
+    <div class="wrapper" >
+        <button class="btn btn-primary"  (click)= "giveData(ourFood2 , selectedtable)"   (click) = "modifyDB(ourFood2)"  (click)="LOLfuncs(mix2 , our2 , str)"   > Place Order</button>
+    </div>
+        
